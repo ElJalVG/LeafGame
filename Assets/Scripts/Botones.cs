@@ -41,6 +41,11 @@ public class Botones : MonoBehaviour
     public void Inicio(){
         SceneManager.LoadScene("Inicio");
     }
+    public void WorldOneGame(){
+         Time.timeScale = 1;
+        SceneManager.LoadScene("WorldOne");
+    }
+   
     
 
     
