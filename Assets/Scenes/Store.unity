@@ -214,8 +214,9 @@ GameObject:
   - component: {fileID: 136024036}
   - component: {fileID: 136024035}
   - component: {fileID: 136024034}
+  - component: {fileID: 136024037}
   m_Layer: 5
-  m_Name: Button (7)
+  m_Name: Trys800
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,7 +284,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 136024035}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 136024037}
+        m_TargetAssemblyTypeName: BuyStore, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &136024035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +335,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136024032}
   m_CullTransparentMesh: 1
+--- !u!114 &136024037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136024032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9140df4a5d6b2c44e8083e08d7cf44d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsPrice: 80
+  itemName: Trys80
 --- !u!1 &152054712
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +430,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 152054715}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606533963}
+        m_TargetAssemblyTypeName: ChangeSkins, Assembly-CSharp
+        m_MethodName: SetPlayerThree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &152054715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,8 +463,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 5139698402381400137, guid: cc3708cec4d3b744fb140454a8ca2404, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -533,8 +572,9 @@ GameObject:
   - component: {fileID: 350396445}
   - component: {fileID: 350396444}
   - component: {fileID: 350396443}
+  - component: {fileID: 350396446}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: Trys1000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -602,7 +642,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 350396444}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 350396446}
+        m_TargetAssemblyTypeName: BuyStore, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &350396444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,6 +693,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350396441}
   m_CullTransparentMesh: 1
+--- !u!114 &350396446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350396441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9140df4a5d6b2c44e8083e08d7cf44d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsPrice: 20
+  itemName: Trys20
 --- !u!1 &352018037
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +788,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 352018040}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606533963}
+        m_TargetAssemblyTypeName: ChangeSkins, Assembly-CSharp
+        m_MethodName: SetPlayerFive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &352018040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,8 +821,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 4765226142414737129, guid: 77bc62e503434594c940713372127cdb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -842,7 +920,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 478886517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606533963}
+        m_TargetAssemblyTypeName: ChangeSkins, Assembly-CSharp
+        m_MethodName: SetPlayerFour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &478886517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -863,8 +953,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6444144618199227502, guid: cc3708cec4d3b744fb140454a8ca2404, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1164,6 +1254,7 @@ GameObject:
   - component: {fileID: 606533961}
   - component: {fileID: 606533960}
   - component: {fileID: 606533959}
+  - component: {fileID: 606533963}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1283,6 +1374,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &606533963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606533958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc97932bd31834d45aedd67d7bcfa5d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5206237142139229872, guid: b9bb1dce3be11e04c9b0076f5c616338, type: 3}
 --- !u!1 &646619802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1588,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 678596916}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606533963}
+        m_TargetAssemblyTypeName: ChangeSkins, Assembly-CSharp
+        m_MethodName: SetPlayerTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &678596916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1505,8 +1621,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2355523159606110279, guid: cc3708cec4d3b744fb140454a8ca2404, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1615,8 +1731,9 @@ GameObject:
   - component: {fileID: 1199226233}
   - component: {fileID: 1199226232}
   - component: {fileID: 1199226231}
+  - component: {fileID: 1199226234}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Trys500
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1684,7 +1801,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1199226232}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1199226234}
+        m_TargetAssemblyTypeName: BuyStore, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1199226232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,6 +1852,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199226229}
   m_CullTransparentMesh: 1
+--- !u!114 &1199226234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199226229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9140df4a5d6b2c44e8083e08d7cf44d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsPrice: 5
+  itemName: Trys50
 --- !u!1 &1224237067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,6 +2077,7 @@ GameObject:
   - component: {fileID: 1267175232}
   - component: {fileID: 1267175231}
   - component: {fileID: 1267175234}
+  - component: {fileID: 1267175235}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2018,6 +2162,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cff0f54bf3ec4d449606d4b5551ba70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1267175235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267175230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1269393804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,8 +2745,9 @@ GameObject:
   - component: {fileID: 1829417508}
   - component: {fileID: 1829417507}
   - component: {fileID: 1829417506}
+  - component: {fileID: 1829417509}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: Trys100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2637,7 +2815,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1829417507}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1829417509}
+        m_TargetAssemblyTypeName: BuyStore, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1829417507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2676,6 +2866,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829417504}
   m_CullTransparentMesh: 1
+--- !u!114 &1829417509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829417504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9140df4a5d6b2c44e8083e08d7cf44d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsPrice: 10
+  itemName: Trys10
 --- !u!1 &1831488796
 GameObject:
   m_ObjectHideFlags: 0

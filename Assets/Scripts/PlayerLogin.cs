@@ -11,6 +11,8 @@ public class PlayerLogin : MonoBehaviour
     [SerializeField] private InputField usernameInputField;
     [SerializeField] private InputField passwordInputField;
     
+    int coins;
+    int trys;
     public void OnLogin()
     {
         LoginWithPlayFabRequest request=new LoginWithPlayFabRequest()
@@ -77,7 +79,25 @@ public class PlayerLogin : MonoBehaviour
         private void OnResultCallback(LoginResult obj)
         {
             PlayerPrefs.SetString("PlayerFabId",obj.PlayFabId);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Game");
+            GetVirtualCurrencies();
             Debug.Log("Inicio de sesion correcto");
+        }
+        public void GetVirtualCurrencies()
+        {
+        PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(),OnGetInventorySucces,OnError);
+        }
+        public void OnGetInventorySucces(GetUserInventoryResult result)
+            {
+                coins=result.VirtualCurrency["CN"];
+                PlayerPrefs.SetInt("Coins", coins);
+                //coinsText.text=coins.ToString();
+
+                trys=result.VirtualCurrency["RT"];
+               // trysText.text=trys.ToString();
+            }
+        public void OnError(PlayFabError error)
+        {
+        Debug.Log("Error"+error.ErrorMessage);
         }
 }
