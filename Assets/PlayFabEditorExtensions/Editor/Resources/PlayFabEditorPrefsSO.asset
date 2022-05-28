@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
   DevAccountEmail: alejandrovaldez346@gmail.com
-  DevAccountToken: srzhpypfxqsnu5zyjpgykfzy8dt4bdazo8rdyh7jmkyaqzgkif35aouxrgbpp537ghwg4ikrccdby9rfmsphh7zmdkz1x1nt9tmyz7e8rb1nn1exh77wt7bk8zhy6w5kuq4pmbhihrfua8s6kcd4cqeshathcepqpqrjm4reo5ieus6skidfw34qdyjj1pp7r9gx14pk
-  SelectedStudio: LeafGame
+  DevAccountToken: teftykao3k7tdkdmt8mni1hr9nh79mnwri5d8c44iighk1oox5z4odr59n77mzhgexo9we3qqxhphacz1rtyp38uww5jcb34fjcebud4w3u4wgc4mjqehdd7rq3qy9kzpaybz9n5brx8r4gpdp6hq6ybrxno5ta45wr9nc8f7d8dhww1kyqyayrfry6on8o1ezbmsyq9
+  SelectedStudio: 
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0
   curMainMenuIdx: 1
-  curSubMenuIdx: 2
+  curSubMenuIdx: 0

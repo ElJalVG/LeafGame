@@ -7,10 +7,11 @@ using PlayFab.ServerModels;
 
 public class VirtualCurrency : MonoBehaviour
 {
+    public static VirtualCurrency Instance;
     // Start is called before the first frame update
     void Start()
     {
-        AddCurrency(10);//pasarPuntaje
+       
     }
 
     // Update is called once per frame
