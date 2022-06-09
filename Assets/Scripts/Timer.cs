@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -15,16 +16,13 @@ public class Timer : MonoBehaviour
     void Start()
     {
         currentTime=startMinutes*60;
+        StarTimer();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            StarTimer();
-        }
         if(timerActive==true)
         {
             currentTime=currentTime-Time.deltaTime;
@@ -33,7 +31,9 @@ public class Timer : MonoBehaviour
         currentTimeText.text=time.Minutes.ToString()+":"+time.Seconds.ToString();
         if(currentTime<=0)
         {
+
             StopTimer();//GamerOver
+            SceneManager.LoadScene("GameOver");
         }
     }
     public void StarTimer()

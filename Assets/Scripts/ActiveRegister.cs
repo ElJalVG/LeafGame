@@ -12,4 +12,9 @@ public class ActiveRegister : MonoBehaviour
         register.SetActive(true);
         login.SetActive(false);
     }
+    public void BackLogin()
+    {
+        register.SetActive(false);
+        login.SetActive(true);
+    }
 }

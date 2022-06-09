@@ -79,7 +79,7 @@ public class PlayerLogin : MonoBehaviour
         private void OnResultCallback(LoginResult obj)
         {
             PlayerPrefs.SetString("PlayerFabId",obj.PlayFabId);
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Inicio");
             GetVirtualCurrencies();
             Debug.Log("Inicio de sesion correcto");
         }
