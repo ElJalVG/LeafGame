@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
@@ -31,7 +32,7 @@ public class Timer : MonoBehaviour
         currentTimeText.text=time.Minutes.ToString()+":"+time.Seconds.ToString();
         if(currentTime<=0)
         {
-
+            Analytics.CustomEvent("onendlevel1");
             StopTimer();//GamerOver
             SceneManager.LoadScene("GameOver");
         }
