@@ -20,7 +20,7 @@ public class GrabController : MonoBehaviour
     {
         if(curretObj != null&&_grab&&Input.GetKeyDown(KeyCode.Q))
         {
-            
+            animator.SetBool("Sujetar",false);
             curretObj.transform.parent=null;
             curretObj.GetComponent<Rigidbody2D>().isKinematic=false;
             _grab=false;

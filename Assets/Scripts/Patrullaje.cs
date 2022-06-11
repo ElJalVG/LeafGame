@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Patrullaje : MonoBehaviour
 {
     public float velocidad;
@@ -46,6 +46,12 @@ public class Patrullaje : MonoBehaviour
             }
         } else{
             anim.SetBool("CaminarEnemy",true);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

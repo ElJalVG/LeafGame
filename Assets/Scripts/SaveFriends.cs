@@ -16,8 +16,7 @@ public class SaveFriends : MonoBehaviour
     {
         if(transform.childCount==0)
         {
-            /*score=100;
-            leaderBoard.SendLeaderboard(score);*/
+            LeaderBoard.Instance.SendLeaderboard(10);
             Debug.Log("TodosLosAmigosRescatados");
         }
     }
