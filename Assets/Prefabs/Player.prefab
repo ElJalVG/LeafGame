@@ -10,13 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 5206237142139229884}
   - component: {fileID: 5206237142139229887}
-  - component: {fileID: 5206237142139229886}
   - component: {fileID: 5206237142139229873}
   - component: {fileID: 5206237142139229885}
   - component: {fileID: 5206237142139229882}
   - component: {fileID: 5206237142139229883}
   - component: {fileID: 5206237142139229880}
   - component: {fileID: 2100372284677992578}
+  - component: {fileID: 8380670442503216990}
+  - component: {fileID: 2140494547580715099}
+  - component: {fileID: 5497193409516044040}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -92,32 +94,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5206237142139229886
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5206237142139229872}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.32650775, y: -0.25987333}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.88, y: 2.13}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.1302228, y: 1.5197467}
-  m_EdgeRadius: 0
 --- !u!50 &5206237142139229873
 Rigidbody2D:
   serializedVersion: 4
@@ -134,7 +110,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0ed9a7f4a8c39134196a0d0750e45978, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -146,7 +122,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206237142139229872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a2b7dddb13769c488270a10e878078d, type: 3}
   m_Name: 
@@ -163,7 +139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206237142139229872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d85abed5fde2054083d1d3bc0c54d6f, type: 3}
   m_Name: 
@@ -199,12 +175,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206237142139229872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9417750195de99e4a8f793fe208f96e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSeleccionado: 1
+  playerSeleccionado: 0
   enableSelectPlayer: 0
   animator: {fileID: 5206237142139229883}
   spriteRenderer: {fileID: 5206237142139229887}
@@ -227,12 +203,73 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206237142139229872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc97932bd31834d45aedd67d7bcfa5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5206237142139229872}
+--- !u!114 &8380670442503216990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206237142139229872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9aea40bed5e3d34fb5c3d4ad9dd68eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpForce: 8
+  animator: {fileID: 5206237142139229883}
+  frecuencia: 10
+  anchoCiclo: 0.2
+  joystick: {fileID: 0}
+  runspeedHorizontal: 5
+--- !u!114 &2140494547580715099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206237142139229872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ebc589cc30d2894f827efca49305275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabDetect: {fileID: 5206237142295312332}
+  boxHolder: {fileID: 5206237142560039931}
+  rayDist: 2
+  holder: 0
+--- !u!61 &5497193409516044040
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206237142139229872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.28740233, y: -0.18724704}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.88, y: 2.13}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9742471, y: 1.4942312}
+  m_EdgeRadius: 0
 --- !u!1 &5206237142295312335
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206237142295312335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.96, y: 0, z: 0}
+  m_LocalPosition: {x: 1.376, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5206237142139229884}
@@ -289,7 +326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206237142552817195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.547, y: -0.075, z: 0}
+  m_LocalPosition: {x: 0.547, y: -0.049, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5206237142139229884}
@@ -357,7 +394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206237142560039930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6000001, y: 0.35, z: 0}
+  m_LocalPosition: {x: 2.659, y: -0.007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5206237142139229884}

@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Box
+  - Enemy
+  - Tuto
+  - Tuto2
+  - Tuto3
+  - Floor
+  - Sujetar
+  - OpenDoor
   layers:
   - Default
   - TransparentFX

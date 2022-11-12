@@ -14,10 +14,11 @@ public class SaveFriends : MonoBehaviour
     }
     public void SiguienteEscena()
     {
-        if(transform.childCount==0)
+        if (transform.childCount == 0)
         {
-            LeaderBoard.Instance.SendLeaderboard(10);
             Debug.Log("TodosLosAmigosRescatados");
+            LeaderBoard.Instance.SendLeaderboard(10);
+
         }
     }
 }

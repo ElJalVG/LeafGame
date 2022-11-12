@@ -27,16 +27,22 @@ public class BuyStore : MonoBehaviour
             Price = price,
             VirtualCurrency = "CN"
         };
-        
         PlayFabClientAPI.PurchaseItem(request, ResultCallback, ErrorCallback);
-
         // var request=new SubtractUserVirtualCurrencyRequest{
         //     VirtualCurrency="CN",
         //     Amount=coinsPrice
         // };
         // PlayFabClientAPI.SubtractUserVirtualCurrency(request,OnSubtractCoinsSucces,OnError);
     }
-
+    public void BuyTrys()
+    {
+        var request = new SubtractUserVirtualCurrencyRequest
+        {
+            VirtualCurrency="CN",
+            Amount=coinsPrice
+        };
+        PlayFabClientAPI.SubtractUserVirtualCurrency(request,OnSubtractCoinsSucces,OnError);
+    }
     private void ErrorCallback(PlayFabError obj)
     {
         Debug.Log(obj.GenerateErrorReport());

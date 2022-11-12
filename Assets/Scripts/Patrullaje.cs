@@ -15,9 +15,9 @@ public class Patrullaje : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tiempoEspera=inicioTiempoEspera;
-        randomPunto=Random.Range(0,movePuntos.Length);
-        sprite=GetComponent<SpriteRenderer>();
+        tiempoEspera = inicioTiempoEspera;
+        randomPunto = Random.Range(0, movePuntos.Length);
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -27,31 +27,33 @@ public class Patrullaje : MonoBehaviour
     }
     public void MoverEnemigo()
     {
-        Vector3 dir=movePuntos[randomPunto].position-transform.position;
-        bool flipX=dir.x<0;
-        sprite.flipX=flipX;
-        transform.position=Vector2.MoveTowards(transform.position,movePuntos[randomPunto].position,velocidad*Time.deltaTime);
-        if(Vector2.Distance(transform.position,movePuntos[randomPunto].position)<0.2f)
+        Vector3 dir = movePuntos[randomPunto].position - transform.position;
+        bool flipX = dir.x < 0;
+        sprite.flipX = flipX;
+        transform.position = Vector2.MoveTowards(transform.position, movePuntos[randomPunto].position, velocidad * Time.deltaTime);
+        if (Vector2.Distance(transform.position, movePuntos[randomPunto].position) < 0.2f)
         {
-            anim.SetBool("CaminarEnemy",false);
-            if(tiempoEspera<=0)
+            //anim.SetBool("CaminarEnemy",false);
+            if (tiempoEspera <= 0)
             {
-                randomPunto=Random.Range(0,movePuntos.Length);
-                tiempoEspera=inicioTiempoEspera;
+                randomPunto = Random.Range(0, movePuntos.Length);
+                tiempoEspera = inicioTiempoEspera;
             }
             else
             {
-                
-                tiempoEspera-=Time.deltaTime;
+
+                tiempoEspera -= Time.deltaTime;
             }
-        } else{
-            anim.SetBool("CaminarEnemy",true);
+        }
+        else
+        {
+            //anim.SetBool("CaminarEnemy",true);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other) {
+    /*private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene("GameOver");
         }
-    }
+    }*/
 }

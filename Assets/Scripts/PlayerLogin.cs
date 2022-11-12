@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLogin : MonoBehaviour
 {
+    [SerializeField] CurrencyGame currencyGame;
     [SerializeField] private InputField usernameInputField;
     [SerializeField] private InputField passwordInputField;
     
@@ -78,26 +79,14 @@ public class PlayerLogin : MonoBehaviour
         }
         private void OnResultCallback(LoginResult obj)
         {
-            PlayerPrefs.SetString("PlayerFabId",obj.PlayFabId);
+            //PlayerPrefs.SetString("PlayerFabId",obj.PlayFabId);
             SceneManager.LoadScene("Inicio");
-            GetVirtualCurrencies();
             Debug.Log("Inicio de sesion correcto");
+            currencyGame.GetVirtualCurrencies();
         }
-        public void GetVirtualCurrencies()
-        {
-        PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(),OnGetInventorySucces,OnError);
-        }
-        public void OnGetInventorySucces(GetUserInventoryResult result)
-            {
-                coins=result.VirtualCurrency["CN"];
-                PlayerPrefs.SetInt("Coins", coins);
-                //coinsText.text=coins.ToString();
-
-                trys=result.VirtualCurrency["RT"];
-               // trysText.text=trys.ToString();
-            }
         public void OnError(PlayFabError error)
         {
-        Debug.Log("Error"+error.ErrorMessage);
+            Debug.Log("Error"+error.ErrorMessage);
         }
+        
 }

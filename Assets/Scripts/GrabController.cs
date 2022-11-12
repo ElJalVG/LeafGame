@@ -14,11 +14,10 @@ public class GrabController : MonoBehaviour
     
     private void Update() {
         GrabObj();
-        
     }
-    private void GrabObj()
+    public void GrabObj()
     {
-        if(curretObj != null&&_grab&&Input.GetKeyDown(KeyCode.Q))
+        if(curretObj != null&&_grab)
         {
             animator.SetBool("Sujetar",false);
             curretObj.transform.parent=null;
@@ -28,7 +27,10 @@ public class GrabController : MonoBehaviour
             Debug.Log(dir*dropForce);
             curretObj.GetComponent<Rigidbody2D>().AddForce(dir*dropForce, ForceMode2D.Impulse);
         }
-        if(Input.GetKeyDown(KeyCode.E)&&curretObj!=null)
+    }
+    public void LanzarObj()
+    {
+        if(curretObj!=null)
         {
             Debug.Log("Press E");
             _grab =!_grab;

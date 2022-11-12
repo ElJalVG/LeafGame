@@ -5,11 +5,37 @@ using UnityEngine;
 public class CheckGround : MonoBehaviour
 {
     public static bool isGrounded;
+    public bool grounded = false;
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        isGrounded=true;       
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Floor"))
+        {
+            grounded = true;
+            //isGrounded = true;
+            Debug.Log("Colision");
+        }
+        if (other.CompareTag("Box"))
+        {
+            grounded = true;
+            //isGrounded = true;
+            Debug.Log("Colision");
+        }
+
     }
-    private void OnTriggerExit2D(Collider2D other) {
-        isGrounded=false;
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Floor"))
+        {
+            grounded = false;
+            //isGrounded = false;
+            Debug.Log("SinColision");
+        }
+        if (other.CompareTag("Box"))
+        {
+            grounded = false;
+            //isGrounded = false;
+            Debug.Log("SinColision");
+        }
     }
 }
