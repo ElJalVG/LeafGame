@@ -1,71 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using PlayFab;
 using PlayFab.ClientModels;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using System;
 
-public class LeaderBoard : MonoBehaviour
+public class Leaderboard : MonoBehaviour
 {
-    public static LeaderBoard Instance;
-    public GameObject rowPrefab;
-    public Transform rowsParent;
-
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject Number, Name, Levels;
+    PlayFabManager playFabManager;
+    void Awake()
     {
-        Instance = this;
+        playFabManager = GameObject.Find("PlayFabManager").GetComponent<PlayFabManager>();
+        playFabManager.LoadingMessage("Loading Leaderboard...");
+        ReadLeaderboard();
     }
-
-    // Update is called once per frame
-    void Update()
+    void ReadLeaderboard()
     {
-        
-    }
-    void OnError(PlayFabError error)
-    {
-        Debug.Log("Error en su cuenta");
-        Debug.Log(error.GenerateErrorReport());
-    }   
-    public void SendLeaderboard(int score)
-    {
-        var request=new UpdatePlayerStatisticsRequest{
-            Statistics =new List<StatisticUpdate>{
-                new StatisticUpdate {
-                    StatisticName="Coins",
-                    Value=score
-                }
-            }
-        };
-        PlayFabClientAPI.UpdatePlayerStatistics(request, OnleaderboardUpdate,OnError);
-    }
-    void OnleaderboardUpdate(UpdatePlayerStatisticsResult result)
-    {
-        Debug.Log("Leaderboard Enviado");
-    }
-    public void GetLeaderboard()
-    {
-        var request=new GetLeaderboardAroundPlayerRequest{
-            StatisticName="Coins",
-            MaxResultsCount=10
-        };
-        PlayFabClientAPI.GetLeaderboardAroundPlayer(request,OnLeaderboardAroundPlayerGet,OnError);
-    }    
-    public void OnLeaderboardAroundPlayerGet(GetLeaderboardAroundPlayerResult result)
-    {
-        foreach(Transform item in rowsParent)
+        var request = new GetLeaderboardRequest()
         {
-            Destroy(item.gameObject);
-        }
-        foreach(var item in result.Leaderboard)
-        {
-            GameObject newGo=Instantiate(rowPrefab,rowsParent);
-            Text[] texts= newGo.GetComponentsInChildren<Text>();
-            texts[0].text=(item.Position+1).ToString();
-            texts[1].text=item.DisplayName;
-            texts[2].text=item.StatValue.ToString();
-        }
+            StatisticName = "water",
+            StartPosition = 0,
+            MaxResultsCount = 10
+        };
+        PlayFabClientAPI.GetLeaderboard(request, LeaderboardSuccess, LeaderboardError);
     }
-    
+    private void LeaderboardError(PlayFabError error)
+    {
+        playFabManager.LoadingMessage(error.ErrorMessage);
+        playFabManager.LoadingHide();
+    }
+    private void LeaderboardSuccess(GetLeaderboardResult result)
+    {
+        foreach (var item in result.Leaderboard)
+        {
+            GameObject PrefabNumber = Instantiate(Number, this.transform);
+            PrefabNumber.GetComponent<Text>().text = (item.Position + 1).ToString();
+
+            GameObject PrefabName = Instantiate(Name, this.transform);
+            PrefabName.GetComponent<Text>().text = item.DisplayName;
+
+            GameObject PrefaLevels = Instantiate(Levels, this.transform);
+            PrefaLevels.GetComponent<Text>().text = item.StatValue.ToString();
+        }
+        playFabManager.LoadingHide();
+    }
+    public void Home()
+    {
+        SceneManager.LoadScene("Menu");
+
+    }
 }

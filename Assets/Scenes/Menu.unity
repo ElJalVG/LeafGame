@@ -1747,8 +1747,6 @@ GameObject:
   - component: {fileID: 2132809471}
   - component: {fileID: 2132809470}
   - component: {fileID: 2132809474}
-  - component: {fileID: 2132809475}
-  - component: {fileID: 2132809476}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1854,37 +1852,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2132809469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22ddb3264ebedcd4ba3954a4e14a3689, type: 3}
+  m_Script: {fileID: 11500000, guid: 53646d3c336763c43ae1973235ee5928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyGame: {fileID: 2132809476}
-  usernameInputField: {fileID: 0}
-  passwordInputField: {fileID: 0}
---- !u!114 &2132809475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2132809469}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab761e26222391743a598c2f27f72d14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinsText: {fileID: 0}
-  trysText: {fileID: 0}
---- !u!114 &2132809476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2132809469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 458f01894c27d30498574caefe9465b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinsText: {fileID: 1455412597}
-  trysText: {fileID: 1006082186}
+  texWater: {fileID: 1455412597}
+  texTries: {fileID: 1006082186}

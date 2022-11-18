@@ -319,11 +319,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 371289522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab761e26222391743a598c2f27f72d14, type: 3}
+  m_Script: {fileID: 11500000, guid: 53646d3c336763c43ae1973235ee5928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsText: {fileID: 1371869181}
-  trysText: {fileID: 274972335}
+  texWater: {fileID: 274972335}
+  texTries: {fileID: 1371869181}
 --- !u!1 &374677730
 GameObject:
   m_ObjectHideFlags: 0

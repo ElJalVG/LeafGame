@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &48217597
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1537,7 +1537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1843721289
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1609,7 +1609,6 @@ GameObject:
   - component: {fileID: 2003163963}
   - component: {fileID: 2003163962}
   - component: {fileID: 2003163966}
-  - component: {fileID: 2003163967}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1720,26 +1719,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2003163961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22ddb3264ebedcd4ba3954a4e14a3689, type: 3}
+  m_Script: {fileID: 11500000, guid: 53646d3c336763c43ae1973235ee5928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyGame: {fileID: 0}
-  usernameInputField: {fileID: 0}
-  passwordInputField: {fileID: 0}
---- !u!114 &2003163967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003163961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab761e26222391743a598c2f27f72d14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinsText: {fileID: 1623589112}
-  trysText: {fileID: 629971309}
+  texWater: {fileID: 1623589112}
+  texTries: {fileID: 629971309}
 --- !u!1 &2025604439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,7 +1808,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 391303101}
         m_TargetAssemblyTypeName: Botones, Assembly-CSharp
-        m_MethodName: Game
+        m_MethodName: WorldOne
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

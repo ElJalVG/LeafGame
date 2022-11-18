@@ -83,15 +83,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 5139698402381400137, guid: cc3708cec4d3b744fb140454a8ca2404, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.88, y: 2.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &5206237142139229873
@@ -157,7 +157,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5206237142139229872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 8665d20827bdbfe40bd4ab9d9135321e, type: 2}
   m_CullingMode: 0
@@ -223,11 +223,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 8
-  animator: {fileID: 5206237142139229883}
+  animator: {fileID: 0}
   frecuencia: 10
   anchoCiclo: 0.2
   joystick: {fileID: 0}
   runspeedHorizontal: 5
+  checkGround: {fileID: 0}
+  leafMexicoSprite: {fileID: -2355523159606110279, guid: cc3708cec4d3b744fb140454a8ca2404, type: 3}
+  leafFitnesSprite: {fileID: -6444144618199227502, guid: cc3708cec4d3b744fb140454a8ca2404, type: 3}
+  leafBigoteSprite: {fileID: 5139698402381400137, guid: cc3708cec4d3b744fb140454a8ca2404, type: 3}
+  myTypePlayer: 1
 --- !u!114 &2140494547580715099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +267,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.88, y: 2.13}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2.88, y: 2.13}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -370,6 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad2f92ff69ff584b9eb95163709aa09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grounded: 0
 --- !u!1 &5206237142560039930
 GameObject:
   m_ObjectHideFlags: 0

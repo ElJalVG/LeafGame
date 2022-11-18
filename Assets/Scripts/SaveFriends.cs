@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SaveFriends : MonoBehaviour
 {
-    /*[SerializeField] LeaderBoard leaderBoard;
-    int score;*/
-    // Update is called once per frame
     void Update()
     {
         SiguienteEscena();
@@ -17,7 +14,7 @@ public class SaveFriends : MonoBehaviour
         if (transform.childCount == 0)
         {
             Debug.Log("TodosLosAmigosRescatados");
-            LeaderBoard.Instance.SendLeaderboard(10);
+            SceneManager.LoadScene("Menu");
 
         }
     }

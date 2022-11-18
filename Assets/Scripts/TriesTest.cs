@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FriendSaved : MonoBehaviour
+public class TriesTest : MonoBehaviour
 {
     [SerializeField] UIGameScript uIGameScript;
 
@@ -10,8 +10,8 @@ public class FriendSaved : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uIGameScript.Water += 10;
-            uIGameScript.UpdateWater();//ACTUALIZANDO WT Y TR
+            uIGameScript.Tries += 10;
+            uIGameScript.UpdateTries();//actualizandoWT Y TR
             Destroy(gameObject, 0.5f);
         }
     }

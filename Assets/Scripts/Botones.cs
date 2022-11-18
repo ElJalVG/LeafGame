@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using PlayFab;
+using PlayFab.ClientModels;
+using System;
+using UnityEngine.Advertisements;
 
 public class Botones : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    PlayFabManager playFabManager;
+    private void Awake()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        playFabManager = GameObject.Find("PlayFabManager").GetComponent<PlayFabManager>();
     }
     public void Menu()
     {
@@ -30,10 +28,6 @@ public class Botones : MonoBehaviour
         SceneManager.LoadScene("Worlds");
     }
     public void WorldOne()
-    {
-        SceneManager.LoadScene("WorldOne");
-    }
-    public void Game()
     {
         SceneManager.LoadScene("Game");
     }
