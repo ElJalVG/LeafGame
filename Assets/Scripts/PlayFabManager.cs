@@ -10,8 +10,7 @@ public class PlayFabManager : MonoBehaviour
     GameObject panel;
     [SerializeField] int timeLoading;
     public string Player_ID, DisplayName, PlayerSkin;
-    public int PlayerWater, PlayerTries;
-
+    public int PlayerWater, PlayerTries, PlayerFriends;
     void Awake()
     {
         if (instance == null)

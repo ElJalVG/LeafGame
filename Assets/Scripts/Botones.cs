@@ -10,7 +10,10 @@ using UnityEngine.Advertisements;
 
 public class Botones : MonoBehaviour
 {
+    [SerializeField] SoundManager soundManager;
     PlayFabManager playFabManager;
+    [SerializeField] GameObject volumen;
+    [SerializeField] GameObject pausa;
     private void Awake()
     {
         playFabManager = GameObject.Find("PlayFabManager").GetComponent<PlayFabManager>();
@@ -51,5 +54,27 @@ public class Botones : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+    public void ActivateVolume()
+    {
+        volumen.SetActive(true);
+        soundManager.Load();
+    }
+    public void ActivateFalseVolume()
+    {
+        volumen.SetActive(false);
+        soundManager.Save();
+    }
+    public void ActivateinGame()
+    {
+        volumen.SetActive(true);
+        pausa.SetActive(false);
+        soundManager.Load();
+    }
+    public void ActivateFalseinGame()
+    {
+        volumen.SetActive(false);
+        pausa.SetActive(true);
+        soundManager.Save();
     }
 }

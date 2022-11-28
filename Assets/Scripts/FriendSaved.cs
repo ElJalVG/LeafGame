@@ -11,7 +11,7 @@ public class FriendSaved : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             uIGameScript.Water += 10;
-            uIGameScript.UpdateWater();//ACTUALIZANDO WT Y TR
+            uIGameScript.UpdateWater();
             Destroy(gameObject, 0.5f);
         }
     }

@@ -2244,6 +2244,7 @@ MonoBehaviour:
   PlayerSkin: 
   PlayerWater: 0
   PlayerTries: 0
+  PlayerFriends: 0
 --- !u!4 &1716582484
 Transform:
   m_ObjectHideFlags: 0

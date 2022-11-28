@@ -27,7 +27,8 @@ public class User : MonoBehaviour
     private void ResultCallBack(RegisterPlayFabUserResult result)
     {
         playFabManager.LoadingMessage("Register Successfull...");
-        InitStat();
+        playFabManager.LoadingHide();
+        //InitStat();
 
     }
     //CREAR STATISTIC
@@ -73,7 +74,7 @@ public class User : MonoBehaviour
         //Other Data
         playFabManager.LoadingHide();
         //Read Statistics score
-        //ReadStatScore();
+        ReadStatScore();
     }
 
     private void ErrorCallback(PlayFabError obj)
@@ -99,7 +100,7 @@ public class User : MonoBehaviour
     }
     private void SuccesStat(GetPlayerStatisticsResult result)
     {
-        playFabManager.PlayerTries = result.Statistics[0].Value;
+        playFabManager.PlayerFriends = result.Statistics[0].Value;
         playFabManager.LoadingMessage("Loading Profil SuccessFull...");
     }
     //VIRTUAL CURRENCY WATER
@@ -181,6 +182,6 @@ public class User : MonoBehaviour
     public void LoadMenu()
     {
         playFabManager.LoadingHide();
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Inicio");
     }
 }

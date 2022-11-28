@@ -29,7 +29,7 @@ public class Shop : MonoBehaviour
             playFabManager.PlayerWater -= 10;
             txtWater.text = playFabManager.PlayerWater.ToString();
             //PlayFab Sync Data
-            PlayerDataTitle("skin", "leadMexico");
+            PlayerDataTitle("skin", "leafMexico");
             waterAmount = 10;
             SubstractVCWater(waterAmount);
             iugamescript.UpdateWater();
@@ -58,6 +58,45 @@ public class Shop : MonoBehaviour
             playFabManager.LoadingHide();
         }
     }
+    public void BuyFiveTries()
+    {
+        if (playFabManager.PlayerWater >= 50)
+        {
+            playFabManager.PlayerWater -= 50;
+            txtWater.text = playFabManager.PlayerWater.ToString();
+            //PlayFab Sync Data
+            waterAmount = 50;
+            SubstractVCWater(waterAmount);
+            iugamescript.UpdateWater();
+            iugamescript.Tries += 5;
+            iugamescript.UpdateTries();
+        }
+        else
+        {
+            playFabManager.LoadingMessage("Not enough coins...");
+            playFabManager.LoadingHide();
+        }
+    }
+    public void BuyTenTries()
+    {
+        if (playFabManager.PlayerWater >= 100)
+        {
+            playFabManager.PlayerWater -= 100;
+            txtWater.text = playFabManager.PlayerWater.ToString();
+            //PlayFab Sync Data
+            waterAmount = 100;
+            SubstractVCWater(waterAmount);
+            iugamescript.UpdateWater();
+            iugamescript.Tries += 10;
+            iugamescript.UpdateTries();
+        }
+        else
+        {
+            playFabManager.LoadingMessage("Not enough coins...");
+            playFabManager.LoadingHide();
+        }
+    }
+
     public void PlayerDataTitle(string key, string keyValue)
     {
         playFabManager.PlayerSkin = keyValue;
@@ -84,9 +123,11 @@ public class Shop : MonoBehaviour
     }
     public void Home()
     {
-        SceneManager.LoadScene("Menu");
+
         iugamescript.UpdateWater();
         iugamescript.UpdateTries();
+        SceneManager.LoadScene("Menu");
+
     }
     public void SubstractVCWater(int ammount)
     {

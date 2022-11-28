@@ -21,7 +21,11 @@ public class PlayerMoveJoyst : MonoBehaviour
     [SerializeField] Sprite leafMexicoSprite, leafFitnesSprite, leafBigoteSprite;
 
     PlayFabManager playFabManager;
+    public string friendsTxt;
+    public string highfriendsTxt;
+    int number;
     public TypePlayer myTypePlayer;
+    [SerializeField] NumberFriendsSave numberFriendsSave;
     void Awake()
     {
         playFabManager = GameObject.Find("PlayFabManager").GetComponent<PlayFabManager>();
@@ -54,6 +58,7 @@ public class PlayerMoveJoyst : MonoBehaviour
     }
     void Start()
     {
+        highfriendsTxt = PlayerPrefs.GetInt("HighFriends", 0).ToString();
         inicialLocateEscale = transform.localScale;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -112,5 +117,13 @@ public class PlayerMoveJoyst : MonoBehaviour
         //animator.SetBool("Jump", false);
         Debug.Log("AnimSaltoFalse");
 
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Friend"))
+        {
+            numberFriendsSave.AddScore();
+            Debug.Log("Colisionconamigo");
+        }
     }
 }

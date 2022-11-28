@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using PlayFab;
 using PlayFab.ClientModels;
+using System;
 
 public class UIGameScript : MonoBehaviour
 {
@@ -50,12 +51,11 @@ public class UIGameScript : MonoBehaviour
     {
         //Update Score
         playFabManager.LoadingMessage("Updating data...");
-        UpdatePlayFabManagerInfo();
         var request = new UpdatePlayerStatisticsRequest
         {
             Statistics = new List<StatisticUpdate>
             {
-                new StatisticUpdate{StatisticName="water", Value=Water}
+                new StatisticUpdate{StatisticName="tries", Value=friends}
             }
         };
         PlayFabClientAPI.UpdatePlayerStatistics(request, SuccesUpdate, ErrorUpdate);
@@ -63,7 +63,7 @@ public class UIGameScript : MonoBehaviour
 
     private void SuccesUpdate(UpdatePlayerStatisticsResult result)
     {
-        UpdateWater();
+        UpdatePlayFabManagerInfo();
     }
     private void ErrorUpdate(PlayFabError error)
     {
@@ -105,4 +105,21 @@ public class UIGameScript : MonoBehaviour
         UpdatePlayFabManagerInfo();
     }
     //----------------------------------
+    /*public void UpdateFriendsStatistic()
+    {
+        var request = new UpdatePlayerStatisticsRequest
+        {
+            Statistics = new List<StatisticUpdate>
+            {
+                new StatisticUpdate{StatisticName="tries", Value=friends}
+            }
+        };
+        PlayFabClientAPI.UpdatePlayerStatistics(request, UpdateFriendsStatisticSuccess, ErrorUpdate);
+
+    }*/
+
+    private void UpdateFriendsStatisticSuccess(UpdatePlayerStatisticsResult result)
+    {
+        UpdatePlayFabManagerInfo();
+    }
 }
